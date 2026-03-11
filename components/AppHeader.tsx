@@ -92,7 +92,7 @@ export function AppHeader() {
         />
         {/* 우측 메뉴 패널: 콘텐츠(이용약관·개인정보·언어) 높이만큼만 배경 */}
         <div
-          className={`absolute right-0 top-0 z-10 w-[min(14rem,100vw)] flex flex-col gap-6 p-6 pt-8 pb-6 border-l border-b border-zinc-800 shadow-xl transition-transform duration-200 ${
+          className={`absolute right-0 top-0 z-10 w-[min(12rem,100vw)] flex flex-col gap-6 p-6 pt-8 pb-6 border-l border-b border-zinc-800 shadow-xl transition-transform duration-200 ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
           style={{ backgroundColor: "#18181b" }}
