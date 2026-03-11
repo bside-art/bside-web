@@ -80,7 +80,6 @@ export default async function TermsPage({
       </nav>
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-3xl font-bold mb-6 text-white">{t.termsTitle}</h1>
           <div className="prose prose-invert prose-zinc max-w-none text-zinc-300 [&_a]:text-zinc-400 [&_a]:hover:text-zinc-300 [&_a]:hover:underline">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
           </div>
