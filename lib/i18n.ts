@@ -11,6 +11,11 @@ export const translations = {
     nav: {
       terms: "Terms of Service",
       privacy: "Privacy Policy",
+      localeEn: "English",
+      localeKo: "Korean",
+      switchToEn: "Switch to English",
+      switchToKo: "Switch to Korean",
+      language: "Language",
     },
     comingSoon: {
       title: "Coming soon.",
@@ -63,6 +68,11 @@ export const translations = {
     nav: {
       terms: "이용약관",
       privacy: "개인정보처리방침",
+      localeEn: "English",
+      localeKo: "한국어",
+      switchToEn: "Switch to English",
+      switchToKo: "한국어로 전환",
+      language: "언어",
     },
     comingSoon: {
       title: "출시 준비중입니다.",

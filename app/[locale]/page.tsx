@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Camera, Search, BookOpen, User, ArrowRight, X } from "lucide-react";
 import { useParams, usePathname } from "next/navigation";
 import { translations, isValidLocale, type Locale } from "@/lib/i18n";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 
 export default function HomePage() {
   const params = useParams();
@@ -74,6 +75,7 @@ export default function HomePage() {
             <Link href={`${basePath}/privacy`} className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">
               {t.nav.privacy}
             </Link>
+            <LocaleSwitcher />
           </div>
         </div>
       </nav>

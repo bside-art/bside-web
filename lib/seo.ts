@@ -10,7 +10,7 @@ export function getBaseUrl(): string {
   if (typeof process.env.VERCEL_URL === "string" && process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
   }
-  return "https://bside.app";
+  return "https://bside.art";
 }
 
 export const seoByLocale: Record<

@@ -42,9 +42,9 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: `${baseUrl}/bside-logo.png`,
-          width: 200,
-          height: 63,
+          url: `${baseUrl}/bside-img.png`,
+          width: 1200,
+          height: 630,
           alt: "Bside",
         },
       ],

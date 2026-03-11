@@ -4,6 +4,7 @@ import { readFile } from "fs/promises";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { translations } from "@/lib/i18n";
 
 const locale = "en";
@@ -24,6 +25,7 @@ export default async function PrivacyPage() {
           <div className="flex items-center gap-6">
             <Link href={basePath ? `${basePath}/terms` : "/terms"} className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">{t.nav.terms}</Link>
             <Link href={basePath ? `${basePath}/privacy` : "/privacy"} className="text-sm font-medium text-white transition-colors">{t.nav.privacy}</Link>
+            <LocaleSwitcher />
           </div>
         </div>
       </nav>

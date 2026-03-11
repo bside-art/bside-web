@@ -6,6 +6,7 @@ import { readFile } from "fs/promises";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { isValidLocale, type Locale } from "@/lib/i18n";
 import { translations } from "@/lib/i18n";
 import { getAbsoluteUrl, getBaseUrl, seoByLocale } from "@/lib/seo";
@@ -73,6 +74,7 @@ export default async function TermsPage({
           <div className="flex items-center gap-6">
             <Link href={`${basePath}/terms`} className="text-sm font-medium text-white transition-colors">{t.nav.terms}</Link>
             <Link href={`${basePath}/privacy`} className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">{t.nav.privacy}</Link>
+            <LocaleSwitcher />
           </div>
         </div>
       </nav>
