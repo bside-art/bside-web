@@ -103,8 +103,8 @@ export function AppHeader() {
           <Link href={privacyHref} className={`${linkClass} ${privacyClass} py-2 text-base block rounded-none`} style={{ backgroundColor: "#18181b" }} onClick={() => setMenuOpen(false)}>
             {t.nav.privacy}
           </Link>
-          <div className="pt-2 rounded-none" style={{ backgroundColor: "#18181b" }}>
-            <span className="text-sm text-zinc-500 block mb-2">{t.nav.language}</span>
+          <div className="pt-2 rounded-none flex items-center gap-2 flex-wrap" style={{ backgroundColor: "#18181b" }}>
+            <span className="text-sm text-zinc-500 shrink-0">{t.nav.language}</span>
             <LocaleSwitcher />
           </div>
         </div>
