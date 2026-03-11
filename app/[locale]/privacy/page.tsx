@@ -78,7 +78,7 @@ export default async function PrivacyPage({
       </nav>
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto">
-          <div className="prose prose-invert prose-zinc max-w-none text-zinc-300 [&_a]:text-[#fcff3b] [&_a]:hover:underline">
+          <div className="prose prose-invert prose-zinc max-w-none text-zinc-300 [&_a]:text-zinc-400 [&_a]:hover:text-zinc-300 [&_a]:hover:underline">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
           </div>
         </div>
