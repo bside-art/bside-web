@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Camera, Search, BookOpen, User, ArrowRight, X } from "lucide-react";
 import { useParams, usePathname } from "next/navigation";
 import { translations, isValidLocale, type Locale } from "@/lib/i18n";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { AppHeader } from "@/components/AppHeader";
 
 export default function HomePage() {
   const params = useParams();
@@ -56,29 +56,7 @@ export default function HomePage() {
         </div>
       )}
 
-      <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href={basePath} className="block">
-            <Image
-              src="/bside-logo.png"
-              alt="Bside"
-              width={200}
-              height={63}
-              className="h-10 w-auto"
-              unoptimized
-            />
-          </Link>
-          <div className="flex items-center gap-6">
-            <Link href={`${basePath}/terms`} className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">
-              {t.nav.terms}
-            </Link>
-            <Link href={`${basePath}/privacy`} className="text-sm font-medium text-zinc-300 hover:text-white transition-colors">
-              {t.nav.privacy}
-            </Link>
-            <LocaleSwitcher />
-          </div>
-        </div>
-      </nav>
+      <AppHeader />
 
       <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
@@ -100,7 +78,7 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-zinc-900 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 border border-zinc-700"
+              className="bg-[#fcff3b] text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-[#e5e822] transition-colors flex items-center justify-center gap-2"
             >
               {t.hero.androidDownload} <ArrowRight className="w-5 h-5" />
             </button>
@@ -178,7 +156,7 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-zinc-900 text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-zinc-800 transition-colors inline-flex items-center justify-center gap-2 border border-zinc-700"
+              className="bg-[#fcff3b] text-black px-10 py-5 rounded-full text-xl font-bold hover:bg-[#e5e822] transition-colors inline-flex items-center justify-center gap-2"
             >
               {t.cta.androidDownload} <ArrowRight className="w-6 h-6" />
             </button>
