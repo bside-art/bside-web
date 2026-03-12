@@ -70,9 +70,6 @@ Personalized advertising based on online behavioral information uses 'Cookies' o
 **The user has the right to choose whether to install cookies. However, refusing to install cookies may cause inconvenience in web usage and difficulties in using some services that require login.**
 
 **The methods to refuse personalized advertising and cookie collection are as follows:**
-
-**(Example)**
-
 * Android: Home \> Settings \> Google \> Ads \> Opt out of Ads Personalization (ON)  
 * iPhone: Home \> Settings \> Privacy \> Tracking \> Allow Apps to Request to Track (OFF)
 
