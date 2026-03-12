@@ -49,7 +49,7 @@ export function AppHeader() {
   );
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-zinc-800">
+    <nav className="fixed top-0 w-full bg-black z-50 border-b border-zinc-800">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href={homeHref} className="block" onClick={() => setMenuOpen(false)}>
           <Image
