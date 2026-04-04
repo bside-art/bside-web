@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "art.bside.app",
+      "sha256_cert_fingerprints": [
+        "1D:59:DC:01:BA:F1:4D:03:49:E8:9F:DE:97:6B:AD:B3:20:EB:4E:65:CA:B5:40:0D:DB:73:B5:75:B2:3B:3D:A4"
+      ]
+    }
+  }
+]
