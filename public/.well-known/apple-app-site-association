@@ -1,16 +1,10 @@
 {
   "applinks": {
-    "apps": [],
     "details": [
       {
-        "appID": "C3HA275729.art.bside.ios",
-        "paths": [
-          "/artwork/*",
-          "/user/*",
-          "/exhibition/*",
-          "/gallery/*",
-          "/collection/*",
-          "/feed/*"
+        "appIDs": ["C3HA275729.art.bside.ios"],
+        "components": [
+          { "/": "/*" }
         ]
       }
     ]
