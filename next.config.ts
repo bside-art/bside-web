@@ -1,4 +1,5 @@
 import type {NextConfig} from 'next';
+import {codeInspectorPlugin} from 'code-inspector-plugin';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -21,7 +22,15 @@ const nextConfig: NextConfig = {
   },
   output: 'standalone',
   transpilePackages: ['motion'],
+  turbopack: {
+    rules: codeInspectorPlugin({
+      bundler: 'turbopack',
+    }),
+  },
   webpack: (config, {dev}) => {
+    if (dev) {
+      config.plugins.push(codeInspectorPlugin({bundler: 'webpack'}));
+    }
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
     // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
     if (dev && process.env.DISABLE_HMR === 'true') {
