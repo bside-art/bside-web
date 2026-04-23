@@ -12,7 +12,12 @@ export default function HomePage() {
   const params = useParams();
   const pathname = usePathname();
   const localeParam = params?.locale;
-  const localeStr = localeParam === undefined ? "" : Array.isArray(localeParam) ? localeParam[0] : localeParam;
+  const localeStr =
+    localeParam === undefined
+      ? ""
+      : Array.isArray(localeParam)
+        ? localeParam[0]
+        : localeParam;
   const locale = isValidLocale(localeStr) ? (localeStr as Locale) : "en";
   const t = translations[locale];
   const [showComingSoon, setShowComingSoon] = useState(false);
@@ -34,7 +39,10 @@ export default function HomePage() {
             className="relative bg-zinc-900 border border-zinc-700 rounded-2xl p-8 max-w-sm w-full shadow-xl text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <p id="coming-soon-title" className="text-xl font-bold text-white mb-6">
+            <p
+              id="coming-soon-title"
+              className="text-xl font-bold text-white mb-6"
+            >
               {t.comingSoon.title}
             </p>
             <button
@@ -100,17 +108,24 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="font-bold text-white">{t.card.analyzing}</div>
-                <div className="text-sm text-zinc-400">{t.card.analyzingDesc}</div>
+                <div className="text-sm text-zinc-400">
+                  {t.card.analyzingDesc}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="features" className="py-24 bg-black px-6 border-t border-zinc-900">
+      <section
+        id="features"
+        className="py-24 bg-black px-6 border-t border-zinc-900"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 max-w-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.features.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t.features.title}
+            </h2>
             <p className="text-zinc-400 text-lg">{t.features.subtitle}</p>
           </div>
 
@@ -119,24 +134,36 @@ export default function HomePage() {
               <div className="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                 <Camera className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{t.features.recognition.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{t.features.recognition.description}</p>
+              <h3 className="text-xl font-bold mb-3">
+                {t.features.recognition.title}
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                {t.features.recognition.description}
+              </p>
             </div>
 
             <div className="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
               <div className="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                 <BookOpen className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{t.features.collection.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{t.features.collection.description}</p>
+              <h3 className="text-xl font-bold mb-3">
+                {t.features.collection.title}
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                {t.features.collection.description}
+              </p>
             </div>
 
             <div className="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
               <div className="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center mb-6 shadow-sm">
                 <User className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{t.features.profile.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{t.features.profile.description}</p>
+              <h3 className="text-xl font-bold mb-3">
+                {t.features.profile.title}
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                {t.features.profile.description}
+              </p>
             </div>
           </div>
         </div>
@@ -144,7 +171,9 @@ export default function HomePage() {
 
       <section className="py-32 px-6 bg-zinc-950 text-center border-t border-zinc-900">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t.cta.title}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            {t.cta.title}
+          </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               type="button"
@@ -169,7 +198,7 @@ export default function HomePage() {
           <Link href={basePath} className="block">
             <Image
               src="/bside-logo.png"
-              alt="Bside"
+              alt="bside"
               width={160}
               height={50}
               className="h-8 w-auto"
@@ -177,7 +206,7 @@ export default function HomePage() {
             />
           </Link>
           <div className="text-sm text-zinc-500">
-            © {new Date().getFullYear()} Bside. {t.footer.rights}
+            © {new Date().getFullYear()} bside. {t.footer.rights}
           </div>
         </div>
       </footer>

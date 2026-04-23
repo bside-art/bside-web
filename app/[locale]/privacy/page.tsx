@@ -40,12 +40,23 @@ export async function generateMetadata({
       title: seo.title,
       description: seo.description,
       url,
-      siteName: "Bside",
+      siteName: "bside",
       locale: loc === "ko" ? "ko_KR" : "en_US",
       type: "website",
-      images: [{ url: `${getBaseUrl()}/bside-logo.png`, width: 200, height: 63, alt: "Bside" }],
+      images: [
+        {
+          url: `${getBaseUrl()}/bside-logo.png`,
+          width: 200,
+          height: 63,
+          alt: "bside",
+        },
+      ],
     },
-    twitter: { card: "summary_large_image", title: seo.title, description: seo.description },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+    },
     robots: { index: true, follow: true },
   };
 }
@@ -77,9 +88,18 @@ export default async function PrivacyPage({
       <footer className="bg-black border-t border-zinc-900 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <Link href={basePath}>
-            <Image src="/bside-logo.png" alt="Bside" width={160} height={50} className="h-8 w-auto" unoptimized />
+            <Image
+              src="/bside-logo.png"
+              alt="bside"
+              width={160}
+              height={50}
+              className="h-8 w-auto"
+              unoptimized
+            />
           </Link>
-          <div className="text-sm text-zinc-500">© {new Date().getFullYear()} Bside. {t.footer.rights}</div>
+          <div className="text-sm text-zinc-500">
+            © {new Date().getFullYear()} bside. {t.footer.rights}
+          </div>
         </div>
       </footer>
     </div>
