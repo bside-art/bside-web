@@ -1,5 +1,6 @@
-import type {NextConfig} from 'next';
-import {codeInspectorPlugin} from 'code-inspector-plugin';
+import { withSentryConfig } from "@sentry/nextjs";
+import type { NextConfig } from "next";
+import { codeInspectorPlugin } from "code-inspector-plugin";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -13,27 +14,27 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**', // This allows any path under the hostname
+        protocol: "https",
+        hostname: "picsum.photos",
+        port: "",
+        pathname: "/**", // This allows any path under the hostname
       },
     ],
   },
-  output: 'standalone',
-  transpilePackages: ['motion'],
+  output: "standalone",
+  transpilePackages: ["motion"],
   turbopack: {
     rules: codeInspectorPlugin({
-      bundler: 'turbopack',
+      bundler: "turbopack",
     }),
   },
-  webpack: (config, {dev}) => {
+  webpack: (config, { dev }) => {
     if (dev) {
-      config.plugins.push(codeInspectorPlugin({bundler: 'webpack'}));
+      config.plugins.push(codeInspectorPlugin({ bundler: "webpack" }));
     }
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
     // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
-    if (dev && process.env.DISABLE_HMR === 'true') {
+    if (dev && process.env.DISABLE_HMR === "true") {
       config.watchOptions = {
         ignored: /.*/,
       };
@@ -42,4 +43,22 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withSentryConfig(nextConfig, {
+  org: "bside",
+  project: "bside-web",
+  silent: !process.env.CI,
+
+  // For all available options, see:
+  // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+  widenClientFileUpload: true,
+  tunnelRoute: "/monitoring",
+
+  webpack: {
+    automaticVercelMonitors: true,
+
+    // Tree-shaking options for reducing bundle size
+    treeshake: {
+      removeDebugLogging: true,
+    },
+  },
+});
