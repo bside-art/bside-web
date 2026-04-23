@@ -14,7 +14,9 @@ export function AppHeader() {
 
   const segments = pathname.split("/").filter(Boolean);
   const locale: Locale =
-    segments.length > 0 && isValidLocale(segments[0]) ? (segments[0] as Locale) : "en";
+    segments.length > 0 && isValidLocale(segments[0])
+      ? (segments[0] as Locale)
+      : "en";
   const basePath = pathname === "/" ? "" : `/${locale}`;
   const t = translations[locale];
 
@@ -30,7 +32,9 @@ export function AppHeader() {
 
   const linkClass = "text-sm font-medium transition-colors";
   const termsClass = isTerms ? "text-white" : "text-zinc-300 hover:text-white";
-  const privacyClass = isPrivacy ? "text-white" : "text-zinc-300 hover:text-white";
+  const privacyClass = isPrivacy
+    ? "text-white"
+    : "text-zinc-300 hover:text-white";
 
   const termsHref = basePath ? `${basePath}/terms` : "/terms";
   const privacyHref = basePath ? `${basePath}/privacy` : "/privacy";
@@ -38,10 +42,18 @@ export function AppHeader() {
 
   const navLinks = (
     <>
-      <Link href={termsHref} className={`${linkClass} ${termsClass}`} onClick={() => setMenuOpen(false)}>
+      <Link
+        href={termsHref}
+        className={`${linkClass} ${termsClass}`}
+        onClick={() => setMenuOpen(false)}
+      >
         {t.nav.terms}
       </Link>
-      <Link href={privacyHref} className={`${linkClass} ${privacyClass}`} onClick={() => setMenuOpen(false)}>
+      <Link
+        href={privacyHref}
+        className={`${linkClass} ${privacyClass}`}
+        onClick={() => setMenuOpen(false)}
+      >
         {t.nav.privacy}
       </Link>
       <LocaleSwitcher />
@@ -51,10 +63,14 @@ export function AppHeader() {
   return (
     <nav className="fixed top-0 w-full bg-black z-50 border-b border-zinc-800">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href={homeHref} className="block" onClick={() => setMenuOpen(false)}>
+        <Link
+          href={homeHref}
+          className="block"
+          onClick={() => setMenuOpen(false)}
+        >
           <Image
             src="/bside-logo.png"
-            alt="Bside"
+            alt="bside"
             width={200}
             height={63}
             className="h-10 w-auto"
@@ -80,7 +96,9 @@ export function AppHeader() {
       {/* Mobile: 열린 메뉴 — 우측 패널 + 배경 딤 */}
       <div
         className={`md:hidden fixed inset-0 top-16 z-40 transition-opacity duration-200 ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!menuOpen}
       >
@@ -97,14 +115,29 @@ export function AppHeader() {
           }`}
           style={{ backgroundColor: "#18181b" }}
         >
-          <Link href={termsHref} className={`${linkClass} ${termsClass} py-2 text-base block rounded-none`} style={{ backgroundColor: "#18181b" }} onClick={() => setMenuOpen(false)}>
+          <Link
+            href={termsHref}
+            className={`${linkClass} ${termsClass} py-2 text-base block rounded-none`}
+            style={{ backgroundColor: "#18181b" }}
+            onClick={() => setMenuOpen(false)}
+          >
             {t.nav.terms}
           </Link>
-          <Link href={privacyHref} className={`${linkClass} ${privacyClass} py-2 text-base block rounded-none`} style={{ backgroundColor: "#18181b" }} onClick={() => setMenuOpen(false)}>
+          <Link
+            href={privacyHref}
+            className={`${linkClass} ${privacyClass} py-2 text-base block rounded-none`}
+            style={{ backgroundColor: "#18181b" }}
+            onClick={() => setMenuOpen(false)}
+          >
             {t.nav.privacy}
           </Link>
-          <div className="pt-2 rounded-none flex items-center gap-2 flex-wrap" style={{ backgroundColor: "#18181b" }}>
-            <span className="text-sm text-zinc-500 shrink-0">{t.nav.language}</span>
+          <div
+            className="pt-2 rounded-none flex items-center gap-2 flex-wrap"
+            style={{ backgroundColor: "#18181b" }}
+          >
+            <span className="text-sm text-zinc-500 shrink-0">
+              {t.nav.language}
+            </span>
             <LocaleSwitcher />
           </div>
         </div>

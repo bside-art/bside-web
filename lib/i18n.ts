@@ -26,7 +26,7 @@ export const translations = {
       title: "Record the artwork",
       titleSub: "your gaze lingered on",
       description:
-        "Bside is a mobile application that identifies artworks via AI when you photograph them at exhibitions, provides detailed information, and lets you keep your own visit records.",
+        "bside is a mobile application that identifies artworks via AI when you photograph them at exhibitions, provides detailed information, and lets you keep your own visit records.",
       iosDownload: "Download for iOS",
       androidDownload: "Download for Android",
     },
@@ -83,7 +83,7 @@ export const translations = {
       title: "당신의 시선이 머문",
       titleSub: "작품을 기록하다",
       description:
-        "Bside는 전시 공간에서 마주친 작품을 촬영하면, AI가 작품을 식별하여 상세 정보를 제공하고 나만의 관람 기록으로 남길 수 있는 모바일 애플리케이션입니다.",
+        "bside는 전시 공간에서 마주친 작품을 촬영하면, AI가 작품을 식별하여 상세 정보를 제공하고 나만의 관람 기록으로 남길 수 있는 모바일 애플리케이션입니다.",
       iosDownload: "iOS 다운로드",
       androidDownload: "Android 다운로드",
     },

@@ -5,14 +5,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   title: {
-    default: "Bside – Record the artwork your gaze lingered on",
-    template: "%s | Bside",
+    default: "bside – Record the artwork your gaze lingered on",
+    template: "%s | bside",
   },
   description:
-    "Bside is a mobile app that identifies artworks via AI when you photograph them at exhibitions, provides detailed information, and lets you keep your own visit records.",
+    "bside is a mobile app that identifies artworks via AI when you photograph them at exhibitions, provides detailed information, and lets you keep your own visit records.",
   openGraph: {
     type: "website",
-    siteName: "Bside",
+    siteName: "bside",
     locale: "en",
     alternateLocale: "ko",
   },
@@ -25,7 +25,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body suppressHydrationWarning>{children}</body>

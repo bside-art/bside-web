@@ -16,7 +16,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   if (!isValidLocale(locale)) {
-    return { title: "Bside" };
+    return { title: "bside" };
   }
   const loc = locale as Locale;
   const seo = seoByLocale[loc];
@@ -37,7 +37,7 @@ export async function generateMetadata({
       title: seo.title,
       description: seo.description,
       url: canonicalUrl,
-      siteName: "Bside",
+      siteName: "bside",
       locale: loc === "ko" ? "ko_KR" : "en_US",
       type: "website",
       images: [
@@ -45,7 +45,7 @@ export async function generateMetadata({
           url: `${baseUrl}/bside-img.png`,
           width: 1200,
           height: 630,
-          alt: "Bside",
+          alt: "bside",
         },
       ],
     },
@@ -69,7 +69,5 @@ export default async function LocaleLayout({
   if (!isValidLocale(locale)) {
     notFound();
   }
-  return (
-    <LocaleProvider locale={locale as Locale}>{children}</LocaleProvider>
-  );
+  return <LocaleProvider locale={locale as Locale}>{children}</LocaleProvider>;
 }
