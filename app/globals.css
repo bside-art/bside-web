@@ -1,2 +1,105 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-yellow: #fcff3b;
+  --color-brand-yellow-hover: #e5e822;
+}
+
+@utility heading-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+@utility heading-h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+@utility heading-h3 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+@utility heading-h4 {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+@utility heading-h6 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+@utility label-l {
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+@utility label-s {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+@utility label-xs {
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+
+@utility body-m-semibold {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+@utility body-m-medium {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+@utility body-s {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+@utility button-s {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+@utility number-l {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+@utility number-xs {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}

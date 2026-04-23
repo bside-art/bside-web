@@ -21,7 +21,7 @@ export default function HomePage() {
   const basePath = pathname === "/" ? "" : `/${locale}`;
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#fcff3b] selection:text-black">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-brand-yellow selection:text-black">
       {showComingSoon && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
@@ -40,7 +40,7 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setShowComingSoon(false)}
-              className="bg-[#fcff3b] text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-[#e5e822] transition-colors"
+              className="bg-brand-yellow text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-brand-yellow-hover transition-colors"
             >
               {t.comingSoon.confirm}
             </button>
@@ -71,14 +71,14 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-[#fcff3b] text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-[#e5e822] transition-colors flex items-center justify-center gap-2"
+              className="bg-brand-yellow text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2"
             >
               {t.hero.iosDownload} <ArrowRight className="w-5 h-5" />
             </button>
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-[#fcff3b] text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-[#e5e822] transition-colors flex items-center justify-center gap-2"
+              className="bg-brand-yellow text-black px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-yellow-hover transition-colors flex items-center justify-center gap-2"
             >
               {t.hero.androidDownload} <ArrowRight className="w-5 h-5" />
             </button>
@@ -149,14 +149,14 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-[#fcff3b] text-black px-10 py-5 rounded-full text-xl font-bold hover:bg-[#e5e822] transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-brand-yellow text-black px-10 py-5 rounded-full text-xl font-bold hover:bg-brand-yellow-hover transition-colors inline-flex items-center justify-center gap-2"
             >
               {t.cta.iosDownload} <ArrowRight className="w-6 h-6" />
             </button>
             <button
               type="button"
               onClick={() => setShowComingSoon(true)}
-              className="bg-[#fcff3b] text-black px-10 py-5 rounded-full text-xl font-bold hover:bg-[#e5e822] transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-brand-yellow text-black px-10 py-5 rounded-full text-xl font-bold hover:bg-brand-yellow-hover transition-colors inline-flex items-center justify-center gap-2"
             >
               {t.cta.androidDownload} <ArrowRight className="w-6 h-6" />
             </button>
