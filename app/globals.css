@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand-yellow: #fcff3b;
+  --color-brand-yellow-hover: #e5e822;
+}

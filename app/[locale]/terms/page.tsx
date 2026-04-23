@@ -65,7 +65,7 @@ export default async function TermsPage({
   const content = await readFile(filePath, "utf-8");
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-[#fcff3b] selection:text-black">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-brand-yellow selection:text-black">
       <AppHeader />
       <main className="pt-32 pb-24 px-6">
         <div className="max-w-3xl mx-auto">

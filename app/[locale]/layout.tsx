@@ -3,7 +3,6 @@ import { isValidLocale, type Locale } from "@/lib/i18n";
 import { getAbsoluteUrl, getBaseUrl, seoByLocale } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { LocaleProvider } from "./locale-provider";
-import "../globals.css";
 
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "ko" }];
